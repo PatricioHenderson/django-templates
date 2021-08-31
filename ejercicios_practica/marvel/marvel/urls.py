@@ -36,6 +36,7 @@ Donde 92937874f377a1ea17f7637ee07208622e5cb5e6 es un ejemplo del Token Key.
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('e-commerce/',include('e_commerce.api.urls')),
+    path('e-commerce/', include('e_commerce.urls')),
     path('api-docs/', TemplateView.as_view(
         template_name='swagger-ui.html',
         extra_context={'schema_url':'openapi-schema'}
